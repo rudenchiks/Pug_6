@@ -1,0 +1,122 @@
+extends template
+
+block header
+    .header
+        a(href="index.html")
+            button#main.main-button main
+
+block content
+    #main-content.content.form-content
+        details
+            summary Graph
+            form
+                p
+                    | Значение по оси OX:
+                    br
+                    label
+                        input(type="radio" name="model" value="m")
+                        | MovieName
+                    br
+                    label
+                        input(type="radio" name="year" value="y")
+                        | year
+                    br
+                    label
+                        input(type="radio" name="sale" value="s")
+                        | Cost
+                label
+                    input(type="checkbox" name="maxSale" value="1")
+                    | Max cost
+                br
+                label
+                    input(type="checkbox" name="minSale" value="0")
+                    | Min cost
+                br
+                label
+                    button(type="submit" class="complete-botton") Complete
+
+        details
+            summary Filter
+            br
+            label(for="moviename")
+            | MovieName
+            br
+            input#mark-name(type="text" name="movieName" placeholder="Avatar" required)
+            br
+            br
+            label Cost from and to
+            br
+            div
+                input#start-cost(type="number" name="fromCost" required)
+                span to
+                input#end-cost(type="number" name="endCost" required)
+            br
+            br
+            label Year from and to
+            br
+            div
+                input#start-year(type="number" name="fromYear" required)
+                span to
+                input#end-year(type="number" name="endYear" required)
+            br
+            br
+            label Cost from and to
+            br
+            div
+                input#start-vin(type="number" name="fromViews" required)
+                span to
+                input#end-vin(type="number" name="endViews" required)
+            br
+            br
+            label Rating from and to
+            br
+            div
+                input#start-body(type="number" name="fromB" required)
+                span to
+                input#end-body(type="number" name="endBody" required)
+            br
+            button#searchBtn.complete-button(type="submit") complete
+
+        details
+            summary Sorted
+            form
+                p first:
+                select
+                    option(value="0" selected) rating
+                    option(value="1") name
+                    option(value="2") year
+
+                p second:
+                select
+                    option(value="0" selected) rating
+                    option(value="1") name
+                    option(value="2") year
+
+                p third:
+                select
+                    option(value="0" selected) rating
+                    option(value="1") name
+                    option(value="2") year
+
+                br
+                button#sortedBtn.complete-button(type="submit") complete
+
+        table.record-table(border="2")
+            tr.table-header
+                th №
+                th MovieName
+                th Year
+                th Views
+                th Cost
+                th Rating
+                th averageRating
+
+            each film in data2.films
+                tr
+                    td= film.num
+                    td= film.movieName
+                    td= film.year
+                    td= film.views
+                    td= film.cost
+                    td= film.rating
+                    td= film.averageRating

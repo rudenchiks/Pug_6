@@ -1,0 +1,25 @@
+extends template
+
+block header
+    .header
+        a(href="index.html")
+            button#main.main-button main
+        a(href="table.html")
+            button#list.list-button= data.headerButtonText
+
+block content
+    .content
+        content.form-content
+            img(src=data.image.src alt=data.image.alt width=data.image.width)
+            div
+                h2= data.filmTitle
+                p= data.filmDescription
+                h3 Описание
+                ul
+                    each spec in data.specifications
+                        li= spec.label + ": " + spec.value
+                h3 Особенности
+                ul
+                    each feature in data.features
+                        li= feature.label + ": " + feature.value
+                p= data.additionalInfo

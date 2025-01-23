@@ -1,0 +1,82 @@
+block variables
+    - 
+        var data = {
+            headerButtonText: 'Top films',
+            image: {
+                src: 'https://i.pinimg.com/564x/b2/ee/10/b2ee10a4770f28507136d9b359977957.jpg',
+                alt: 'Blonde',
+                width: '500px'
+            },
+            filmTitle: 'Blonde',
+            filmDescription: 'Комедийный фильм о преодолении стереотипов, основанный на одноимённом романе Аманды Браун',
+            specifications: [
+                { label: 'Режиссёр', value: 'Роберт Лукетик' },
+                { label: 'Жанр', value: 'комедия, мелодрама' },
+                { label: 'Главная роль', value: 'Риз Уизерспун (Эль Вудс)' },
+                { label: 'Основные темы', value: 'борьба с предрассудками, женская независимость, сила уверенности в себе' },
+                { label: 'Продолжительность', value: '96 минут' },
+                { label: 'Премьера', value: 'июль 2001 года' },
+            ],
+            features: [
+                { label: 'Сильный женский образ', value: 'Эль Вудс — символ независимой, уверенной в себе женщины, которая добивается своих целей и помогает другим.' },
+                { label: 'Мотивирующий сюжет', value: 'История Эль Вудс вдохновляет на веру в себя и показывает, что упорство и труд могут привести к успеху даже в самых сложных ситуациях.' },
+                { label: 'Борьба со стереотипами', value: 'Фильм показывает, как главная героиня преодолевает стереотипы о «глупых блондинках». Эль доказывает, что можно быть стильной, женственной и при этом умной, решительной и успешной.' }
+            ],
+            additionalInfo: 'Бюджет фильма составил $18 млн, а кассовые сборы превысили $141 млн. Это сделало фильм коммерчески успешным и открыло дорогу для сиквелов.'
+        }
+
+    -
+        var data2 = {
+            films: [
+                { num: "1", movieName: "Inception", year: "2010", views: "3,200,000", cost: "836", rating: "4.5", averageRating: "8.8" },
+                { num: "2", movieName: "The Dark Knight", year: "2008", views: "4,500,000", cost: "1,005", rating: "4.7", averageRating: "9.0" },
+                { num: "3", movieName: "Avatar", year: "2009", views: "5,200,000", cost: "2,923", rating: "4.2", averageRating: "7.8" },
+                { num: "4", movieName: "Titanic", year: "1997", views: "6,000,000", cost: "2,200", rating: "4.8", averageRating: "7.9" },
+                { num: "5", movieName: "Avengers: Endgame", year: "2019", views: "7,000,000", cost: "2,798", rating: "4.6", averageRating: "8.4" },
+                { num: "6", movieName: "Interstellar", year: "2014", views: "2,800,000", cost: "677", rating: "4.7", averageRating: "8.6" },
+                { num: "7", movieName: "Joker", year: "2019", views: "3,900,000", cost: "1,074", rating: "4.5", averageRating: "8.4" },
+                { num: "8", movieName: "Frozen", year: "2013", views: "2,700,000", cost: "1,290", rating: "4.1", averageRating: "7.4" },
+                { num: "9", movieName: "Black Panther", year: "2018", views: "4,200,000", cost: "1,346", rating: "4.3", averageRating: "7.3" },
+                { num: "10", movieName: "Spider-Man: No Way Home", year: "2021", views: "5,300,000", cost: "1,920", rating: "4.6", averageRating: "8.3" },
+                { num: "11", movieName: "The Lion King", year: "1994", views: "4,700,000", cost: "968", rating: "4.9", averageRating: "8.5" },
+                { num: "12", movieName: "Shrek", year: "2001", views: "3,100,000", cost: "484", rating: "4.4", averageRating: "7.9" },
+                { num: "13", movieName: "Iron Man", year: "2008", views: "3,500,000", cost: "585", rating: "4.6", averageRating: "7.9" },
+                { num: "14", movieName: "The Matrix", year: "1999", views: "5,100,000", cost: "467", rating: "4.8", averageRating: "8.7" },
+                { num: "15", movieName: "Forrest Gump", year: "1994", views: "6,200,000", cost: "678", rating: "4.9", averageRating: "8.8" },
+                { num: "16", movieName: "The Shawshank Redemption", year: "1994", views: "7,400,000", cost: "283", rating: "5.0", averageRating: "9.3" },
+                { num: "17", movieName: "Gladiator", year: "2000", views: "4,300,000", cost: "457", rating: "4.7", averageRating: "8.5" },
+                { num: "18", movieName: "Finding Nemo", year: "2003", views: "3,200,000", cost: "940", rating: "4.5", averageRating: "8.2" },
+                { num: "19", movieName: "Frozen II", year: "2019", views: "2,800,000", cost: "1,450", rating: "4.2", averageRating: "7.0" },
+                { num: "20", movieName: "The Avengers", year: "2012", views: "4,600,000", cost: "1,519", rating: "4.5", averageRating: "8.0" },
+                { num: "21", movieName: "Deadpool", year: "2016", views: "3,700,000", cost: "783", rating: "4.6", averageRating: "8.0" },
+                { num: "22", movieName: "Harry Potter and the Sorcerer's Stone", year: "2001", views: "5,000,000", cost: "974", rating: "4.5", averageRating: "7.6" },
+                { num: "23", movieName: "Star Wars: A New Hope", year: "1977", views: "4,200,000", cost: "775", rating: "4.7", averageRating: "8.6" },
+                { num: "24", movieName: "The Godfather", year: "1972", views: "6,800,000", cost: "248", rating: "5.0", averageRating: "9.2" },
+                { num: "25", movieName: "Transformers", year: "2007", views: "3,200,000", cost: "709", rating: "4.0", averageRating: "7.1" },
+                { num: "26", movieName: "Frozen", year: "2013", views: "3,400,000", cost: "1,300", rating: "4.2", averageRating: "7.5" },
+                { num: "27", movieName: "Minions", year: "2015", views: "2,900,000", cost: "1,159", rating: "4.1", averageRating: "6.4" },
+                { num: "28", movieName: "Wonder Woman", year: "2017", views: "4,100,000", cost: "821", rating: "4.4", averageRating: "7.4" },
+                { num: "29", movieName: "The Hobbit", year: "2012", views: "3,800,000", cost: "1,017", rating: "4.3", averageRating: "7.9" },
+                { num: "30", movieName: "The Lego Movie", year: "2014", views: "3,200,000", cost: "468", rating: "4.2", averageRating: "7.7" },
+                { num: "31", movieName: "Mad Max: Fury Road", year: "2015", views: "3,500,000", cost: "378", rating: "4.6", averageRating: "8.1" },
+                { num: "32", movieName: "Jurassic Park", year: "1993", views: "5,800,000", cost: "1,034", rating: "4.8", averageRating: "8.1" },
+                { num: "33", movieName: "Guardians of the Galaxy", year: "2014", views: "4,000,000", cost: "772", rating: "4.5", averageRating: "8.0" },
+                { num: "34", movieName: "Parasite", year: "2019", views: "3,300,000", cost: "258", rating: "4.8", averageRating: "8.6" },
+                { num: "35", movieName: "It", year: "2017", views: "3,700,000", cost: "701", rating: "4.3", averageRating: "7.3" },
+                { num: "36", movieName: "La La Land", year: "2016", views: "2,800,000", cost: "447", rating: "4.6", averageRating: "8.0" },
+                { num: "37", movieName: "Up", year: "2009", views: "4,100,000", cost: "735", rating: "4.7", averageRating: "8.2" },
+                { num: "38", movieName: "The Social Network", year: "2010", views: "3,200,000", cost: "224", rating: "4.5", averageRating: "7.7" },
+                { num: "39", movieName: "Doctor Strange", year: "2016", views: "3,900,000", cost: "678", rating: "4.4", averageRating: "7.5" },
+                { num: "40", movieName: "The Revenant", year: "2015", views: "2,700,000", cost: "532", rating: "4.5", averageRating: "8.0" },
+                { num: "41", movieName: "Dunkirk", year: "2017", views: "2,600,000", cost: "1000", rating: "4.6", averageRating: "8.2" },
+                { num: "42", movieName: "Toy Story 3", year: "2010", views: "3,500,000", cost: "415", rating: "4.8", averageRating: "8.3" },
+                { num: "43", movieName: "The Incredibles", year: "2004", views: "3,800,000", cost: "650", rating: "4.5", averageRating: "8.0" },
+                { num: "44", movieName: "The Wolf of Wall Street", year: "2013", views: "4,400,000", cost: "900", rating: "4.6", averageRating: "8.2" },
+                { num: "45", movieName: "The Big Lebowski", year: "1998", views: "3,000,000", cost: "150", rating: "4.7", averageRating: "8.1" },
+                { num: "46", movieName: "The Godfather: Part II", year: "1974", views: "4,500,000", cost: "100", rating: "5.0", averageRating: "9.0" },
+                { num: "47", movieName: "A Beautiful Mind", year: "2001", views: "3,400,000", cost: "580", rating: "4.7", averageRating: "8.2" },
+                { num: "48", movieName: "Braveheart", year: "1995", views: "3,800,000", cost: "700", rating: "4.8", averageRating: "8.3" },
+                { num: "49", movieName: "The Pursuit of Happyness", year: "2006", views: "3,000,000", cost: "550", rating: "4.6", averageRating: "8.0" },
+                { num: "50", movieName: "The Dark Knight Rises", year: "2012", views: "4,200,000", cost: "1,000", rating: "4.5", averageRating: "8.4" }
+            ]
+        };

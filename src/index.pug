@@ -1,0 +1,36 @@
+extends template
+
+block header
+    .wrapper
+        .content
+            .menu
+                form.search-form(action="#", method="get")
+                    input(type="text" placeholder="Поиск" name="search" class="search-input")
+                    button(type="submit") Поиск
+            nav
+                a(href='click.html') Description
+                a(href='table.html') Table
+            h1(align='center') Фильмер
+
+block content
+    .main
+        .card
+            a(href="#")
+                img(src='https://i.pinimg.com/564x/b2/ee/10/b2ee10a4770f28507136d9b359977957.jpg')
+            h3 Blonde
+        .card
+            img(src='https://i.pinimg.com/736x/f9/d0/16/f9d016aca48f90c017e1a6500919d753.jpg')
+            h3 Film
+        .card
+            img(src='https://i.pinimg.com/736x/61/c9/17/61c917be171e0835c66545a6736922da.jpg')
+            h3 Festival
+        .card
+            img(src='https://i.pinimg.com/564x/08/4d/58/084d58cf27ff3e706b5f834b4662a612.jpg')
+            h3 Социальная сеть
+        .card
+            img(src='https://i.pinimg.com/736x/18/5a/01/185a01279625f4577bce532595bd7b3c.jpg')
+            h3 Москва слезам не верит
+        .card
+            a(href="pr.html")
+                img(src='https://i.pinimg.com/736x/e7/b9/c6/e7b9c6b78bb8662761c707562b4578db.jpg')
+            h3 Иван Васильевич меняет профессию
